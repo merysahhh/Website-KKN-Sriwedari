@@ -8,13 +8,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bit Blog</title>
-    <link rel="stylesheet" href="<?= asset('assets/css/bootstrap.min.css') ?>" media="all" type="text/css">
-    <link rel="stylesheet" href="<?= asset('assets/css/style.css') ?>" media="all" type="text/css">
+    <link rel="stylesheet" href="<?= asset('post-crud/assets/css/bootstrap.min.css') ?>" media="all" type="text/css">
+    <link rel="stylesheet" href="<?= asset('post-crud/assets/css/style.css') ?>" media="all" type="text/css">
 </head>
 <body>
 <section id="app">
 
-    <?php require_once "layouts/top-nav.php"?>
+    <?php require_once "./layouts/top-nav.php"?>
 
     <section class="container my-5">
         <!-- Example row of columns -->
@@ -31,7 +31,7 @@
                     <section class="mb-2 overflow-hidden" style="max-height: 15rem;"><img class="img-fluid" src="<?= asset($post->image) ?>" alt=""></section>
                     <h2 class="h5 text-truncate"><?= $post->title ?></h2>
                     <p><?= substr($post->body, 0, 80) ?></p>
-                    <p><a class="btn btn-primary" href="<?= url('detail.php?post_id=') . $post->id ?>" role="button">View details »</a></p>
+                    <p><a class="btn btn-primary" href="<?= url('/detail.php?post_id=') . $post->id ?>" role="button">View details »</a></p>
                 </section>
 
                 <?php } ?>
